@@ -5,7 +5,7 @@
 /// Re-exports for all items of the latest Minecraft version.
 #[cfg(feature = "latest")]
 pub mod latest {
-    pub use super::mc1_21_7::*;
+    pub use super::mc26_2::*;
 }
 
 /// Accompanying types for block entities in Minecraft 1.14.
@@ -2169,5 +2169,477 @@ pub mod mc1_21_7 {
 
     block_entity_compound_types! {
         "1.21.7";
+    }
+}
+
+/// Accompanying types for block entities in Minecraft 1.21.9.
+#[cfg(feature = "1.21.9")]
+pub mod mc1_21_9 {
+    block_entities! {
+        "1.21.9", mc1_21_9;
+        "minecraft:banner", Banner: BannerBlockEntity (> BlockEntity), [];
+        "minecraft:barrel", Barrel: BarrelBlockEntity (> > > BlockEntity), [];
+        "minecraft:beacon", Beacon: BeaconBlockEntity (> BlockEntity), [];
+        "minecraft:bed", Bed: BedBlockEntity (> BlockEntity), [];
+        "minecraft:beehive", Beehive: BeehiveBlockEntity (> BlockEntity), [];
+        "minecraft:bell", Bell: BellBlockEntity (> BlockEntity), [];
+        "minecraft:blast_furnace", BlastFurnace: BlastFurnaceBlockEntity (> > > BlockEntity), [];
+        "minecraft:brewing_stand", BrewingStand: BrewingStandBlockEntity (> > BlockEntity), [];
+        "minecraft:brushable_block", BrushableBlock: BrushableBlockEntity (> BlockEntity), [];
+        "minecraft:calibrated_sculk_sensor", CalibratedSculkSensor: CalibratedSculkSensorBlockEntity (> > BlockEntity), [];
+        "minecraft:campfire", Campfire: CampfireBlockEntity (> BlockEntity), [];
+        "minecraft:chest", Chest: ChestBlockEntity (> > > BlockEntity), [];
+        "minecraft:chiseled_bookshelf", ChiseledBookshelf: ChiseledBookShelfBlockEntity (> BlockEntity), [];
+        "minecraft:command_block", CommandBlock: CommandBlockEntity (> BlockEntity), [];
+        "minecraft:comparator", Comparator: ComparatorBlockEntity (> BlockEntity), [];
+        "minecraft:conduit", Conduit: ConduitBlockEntity (> BlockEntity), [];
+        "minecraft:copper_golem_statue", CopperGolemStatue: CopperGolemStatueBlockEntity (> BlockEntity), [];
+        "minecraft:crafter", Crafter: CrafterBlockEntity (> > > BlockEntity), [];
+        "minecraft:creaking_heart", CreakingHeart: CreakingHeartBlockEntity (> BlockEntity), [];
+        "minecraft:daylight_detector", DaylightDetector: DaylightDetectorBlockEntity (> BlockEntity), [];
+        "minecraft:decorated_pot", DecoratedPot: DecoratedPotBlockEntity (> BlockEntity), [];
+        "minecraft:dispenser", Dispenser: DispenserBlockEntity (> > > BlockEntity), [];
+        "minecraft:dropper", Dropper: DropperBlockEntity (> > > > BlockEntity), [];
+        "minecraft:enchanting_table", EnchantingTable: EnchantingTableBlockEntity (> BlockEntity), [];
+        "minecraft:end_gateway", EndGateway: TheEndGatewayBlockEntity (> > BlockEntity), [];
+        "minecraft:end_portal", EndPortal: TheEndPortalBlockEntity (> BlockEntity), [];
+        "minecraft:ender_chest", EnderChest: EnderChestBlockEntity (> BlockEntity), [];
+        "minecraft:furnace", Furnace: FurnaceBlockEntity (> > > BlockEntity), [];
+        "minecraft:hanging_sign", HangingSign: HangingSignBlockEntity (> > BlockEntity), [];
+        "minecraft:hopper", Hopper: HopperBlockEntity (> > > BlockEntity), [];
+        "minecraft:jigsaw", Jigsaw: JigsawBlockEntity (> BlockEntity), [];
+        "minecraft:jukebox", Jukebox: JukeboxBlockEntity (> BlockEntity), [];
+        "minecraft:lectern", Lectern: LecternBlockEntity (> BlockEntity), [];
+        "minecraft:mob_spawner", MobSpawner: SpawnerBlockEntity (> BlockEntity), [];
+        "minecraft:piston", Piston: PistonMovingBlockEntity (> BlockEntity), [];
+        "minecraft:sculk_catalyst", SculkCatalyst: SculkCatalystBlockEntity (> BlockEntity), [];
+        "minecraft:sculk_sensor", SculkSensor: SculkSensorBlockEntity (> BlockEntity), [];
+        "minecraft:sculk_shrieker", SculkShrieker: SculkShriekerBlockEntity (> BlockEntity), [];
+        "minecraft:shelf", Shelf: ShelfBlockEntity (> BlockEntity), [];
+        "minecraft:shulker_box", ShulkerBox: ShulkerBoxBlockEntity (> > > BlockEntity), [];
+        "minecraft:sign", Sign: SignBlockEntity (> BlockEntity), [];
+        "minecraft:skull", Skull: SkullBlockEntity (> BlockEntity), [];
+        "minecraft:smoker", Smoker: SmokerBlockEntity (> > > BlockEntity), [];
+        "minecraft:structure_block", StructureBlock: StructureBlockEntity (> BlockEntity), [];
+        "minecraft:test_block", TestBlock: TestBlockEntity (> BlockEntity), [];
+        "minecraft:test_instance_block", TestInstanceBlock: TestInstanceBlockEntity (> BlockEntity), [];
+        "minecraft:trapped_chest", TrappedChest: TrappedChestBlockEntity (> > > > BlockEntity), [];
+        "minecraft:trial_spawner", TrialSpawner: TrialSpawnerBlockEntity (> BlockEntity), [];
+        "minecraft:vault", Vault: VaultBlockEntity (> BlockEntity), [];
+    }
+
+    block_entity_types! {
+        "1.21.9";
+        AbstractFurnaceBlockEntity > BaseContainerBlockEntity {  }
+        BannerBlockEntity > BlockEntity {  }
+        BarrelBlockEntity > RandomizableContainerBlockEntity {  }
+        BaseContainerBlockEntity > BlockEntity {  }
+        BeaconBlockEntity > BlockEntity {  }
+        BedBlockEntity > BlockEntity {  }
+        BeehiveBlockEntity > BlockEntity {  }
+        BellBlockEntity > BlockEntity {  }
+        BlastFurnaceBlockEntity > AbstractFurnaceBlockEntity {  }
+        BlockEntity { "x" as x: i32, "y" as y: i32, "z" as z: i32 }
+        BrewingStandBlockEntity > BaseContainerBlockEntity {  }
+        BrushableBlockEntity > BlockEntity {  }
+        CalibratedSculkSensorBlockEntity > SculkSensorBlockEntity {  }
+        CampfireBlockEntity > BlockEntity {  }
+        ChestBlockEntity > RandomizableContainerBlockEntity {  }
+        ChiseledBookShelfBlockEntity > BlockEntity {  }
+        CommandBlockEntity > BlockEntity {  }
+        ComparatorBlockEntity > BlockEntity {  }
+        ConduitBlockEntity > BlockEntity {  }
+        CopperGolemStatueBlockEntity > BlockEntity {  }
+        CrafterBlockEntity > RandomizableContainerBlockEntity {  }
+        CreakingHeartBlockEntity > BlockEntity {  }
+        DaylightDetectorBlockEntity > BlockEntity {  }
+        DecoratedPotBlockEntity > BlockEntity {  }
+        DispenserBlockEntity > RandomizableContainerBlockEntity {  }
+        DropperBlockEntity > DispenserBlockEntity {  }
+        EnchantingTableBlockEntity > BlockEntity {  }
+        EnderChestBlockEntity > BlockEntity {  }
+        FurnaceBlockEntity > AbstractFurnaceBlockEntity {  }
+        HangingSignBlockEntity > SignBlockEntity {  }
+        HopperBlockEntity > RandomizableContainerBlockEntity {  }
+        JigsawBlockEntity > BlockEntity {  }
+        JukeboxBlockEntity > BlockEntity {  }
+        LecternBlockEntity > BlockEntity {  }
+        PistonMovingBlockEntity > BlockEntity {  }
+        RandomizableContainerBlockEntity > BaseContainerBlockEntity {  }
+        SculkCatalystBlockEntity > BlockEntity {  }
+        SculkSensorBlockEntity > BlockEntity {  }
+        SculkShriekerBlockEntity > BlockEntity {  }
+        ShelfBlockEntity > BlockEntity {  }
+        ShulkerBoxBlockEntity > RandomizableContainerBlockEntity {  }
+        SignBlockEntity > BlockEntity {  }
+        SkullBlockEntity > BlockEntity {  }
+        SmokerBlockEntity > AbstractFurnaceBlockEntity {  }
+        SpawnerBlockEntity > BlockEntity {  }
+        StructureBlockEntity > BlockEntity {  }
+        TestBlockEntity > BlockEntity {  }
+        TestInstanceBlockEntity > BlockEntity {  }
+        TheEndGatewayBlockEntity > TheEndPortalBlockEntity {  }
+        TheEndPortalBlockEntity > BlockEntity {  }
+        TrappedChestBlockEntity > ChestBlockEntity {  }
+        TrialSpawnerBlockEntity > BlockEntity {  }
+        VaultBlockEntity > BlockEntity {  }
+    }
+
+    block_entity_compound_types! {
+        "1.21.9";
+    }
+}
+
+/// Accompanying types for block entities in Minecraft 1.21.11.
+#[cfg(feature = "1.21.11")]
+pub mod mc1_21_11 {
+    block_entities! {
+        "1.21.11", mc1_21_11;
+        "minecraft:banner", Banner: BannerBlockEntity (> BlockEntity), [];
+        "minecraft:barrel", Barrel: BarrelBlockEntity (> > > BlockEntity), [];
+        "minecraft:beacon", Beacon: BeaconBlockEntity (> BlockEntity), [];
+        "minecraft:bed", Bed: BedBlockEntity (> BlockEntity), [];
+        "minecraft:beehive", Beehive: BeehiveBlockEntity (> BlockEntity), [];
+        "minecraft:bell", Bell: BellBlockEntity (> BlockEntity), [];
+        "minecraft:blast_furnace", BlastFurnace: BlastFurnaceBlockEntity (> > > BlockEntity), [];
+        "minecraft:brewing_stand", BrewingStand: BrewingStandBlockEntity (> > BlockEntity), [];
+        "minecraft:brushable_block", BrushableBlock: BrushableBlockEntity (> BlockEntity), [];
+        "minecraft:calibrated_sculk_sensor", CalibratedSculkSensor: CalibratedSculkSensorBlockEntity (> > BlockEntity), [];
+        "minecraft:campfire", Campfire: CampfireBlockEntity (> BlockEntity), [];
+        "minecraft:chest", Chest: ChestBlockEntity (> > > BlockEntity), [];
+        "minecraft:chiseled_bookshelf", ChiseledBookshelf: ChiseledBookShelfBlockEntity (> BlockEntity), [];
+        "minecraft:command_block", CommandBlock: CommandBlockEntity (> BlockEntity), [];
+        "minecraft:comparator", Comparator: ComparatorBlockEntity (> BlockEntity), [];
+        "minecraft:conduit", Conduit: ConduitBlockEntity (> BlockEntity), [];
+        "minecraft:copper_golem_statue", CopperGolemStatue: CopperGolemStatueBlockEntity (> BlockEntity), [];
+        "minecraft:crafter", Crafter: CrafterBlockEntity (> > > BlockEntity), [];
+        "minecraft:creaking_heart", CreakingHeart: CreakingHeartBlockEntity (> BlockEntity), [];
+        "minecraft:daylight_detector", DaylightDetector: DaylightDetectorBlockEntity (> BlockEntity), [];
+        "minecraft:decorated_pot", DecoratedPot: DecoratedPotBlockEntity (> BlockEntity), [];
+        "minecraft:dispenser", Dispenser: DispenserBlockEntity (> > > BlockEntity), [];
+        "minecraft:dropper", Dropper: DropperBlockEntity (> > > > BlockEntity), [];
+        "minecraft:enchanting_table", EnchantingTable: EnchantingTableBlockEntity (> BlockEntity), [];
+        "minecraft:end_gateway", EndGateway: TheEndGatewayBlockEntity (> > BlockEntity), [];
+        "minecraft:end_portal", EndPortal: TheEndPortalBlockEntity (> BlockEntity), [];
+        "minecraft:ender_chest", EnderChest: EnderChestBlockEntity (> BlockEntity), [];
+        "minecraft:furnace", Furnace: FurnaceBlockEntity (> > > BlockEntity), [];
+        "minecraft:hanging_sign", HangingSign: HangingSignBlockEntity (> > BlockEntity), [];
+        "minecraft:hopper", Hopper: HopperBlockEntity (> > > BlockEntity), [];
+        "minecraft:jigsaw", Jigsaw: JigsawBlockEntity (> BlockEntity), [];
+        "minecraft:jukebox", Jukebox: JukeboxBlockEntity (> BlockEntity), [];
+        "minecraft:lectern", Lectern: LecternBlockEntity (> BlockEntity), [];
+        "minecraft:mob_spawner", MobSpawner: SpawnerBlockEntity (> BlockEntity), [];
+        "minecraft:piston", Piston: PistonMovingBlockEntity (> BlockEntity), [];
+        "minecraft:sculk_catalyst", SculkCatalyst: SculkCatalystBlockEntity (> BlockEntity), [];
+        "minecraft:sculk_sensor", SculkSensor: SculkSensorBlockEntity (> BlockEntity), [];
+        "minecraft:sculk_shrieker", SculkShrieker: SculkShriekerBlockEntity (> BlockEntity), [];
+        "minecraft:shelf", Shelf: ShelfBlockEntity (> BlockEntity), [];
+        "minecraft:shulker_box", ShulkerBox: ShulkerBoxBlockEntity (> > > BlockEntity), [];
+        "minecraft:sign", Sign: SignBlockEntity (> BlockEntity), [];
+        "minecraft:skull", Skull: SkullBlockEntity (> BlockEntity), [];
+        "minecraft:smoker", Smoker: SmokerBlockEntity (> > > BlockEntity), [];
+        "minecraft:structure_block", StructureBlock: StructureBlockEntity (> BlockEntity), [];
+        "minecraft:test_block", TestBlock: TestBlockEntity (> BlockEntity), [];
+        "minecraft:test_instance_block", TestInstanceBlock: TestInstanceBlockEntity (> BlockEntity), [];
+        "minecraft:trapped_chest", TrappedChest: TrappedChestBlockEntity (> > > > BlockEntity), [];
+        "minecraft:trial_spawner", TrialSpawner: TrialSpawnerBlockEntity (> BlockEntity), [];
+        "minecraft:vault", Vault: VaultBlockEntity (> BlockEntity), [];
+    }
+
+    block_entity_types! {
+        "1.21.11";
+        AbstractFurnaceBlockEntity > BaseContainerBlockEntity {  }
+        BannerBlockEntity > BlockEntity {  }
+        BarrelBlockEntity > RandomizableContainerBlockEntity {  }
+        BaseContainerBlockEntity > BlockEntity {  }
+        BeaconBlockEntity > BlockEntity {  }
+        BedBlockEntity > BlockEntity {  }
+        BeehiveBlockEntity > BlockEntity {  }
+        BellBlockEntity > BlockEntity {  }
+        BlastFurnaceBlockEntity > AbstractFurnaceBlockEntity {  }
+        BlockEntity { "x" as x: i32, "y" as y: i32, "z" as z: i32 }
+        BrewingStandBlockEntity > BaseContainerBlockEntity {  }
+        BrushableBlockEntity > BlockEntity {  }
+        CalibratedSculkSensorBlockEntity > SculkSensorBlockEntity {  }
+        CampfireBlockEntity > BlockEntity {  }
+        ChestBlockEntity > RandomizableContainerBlockEntity {  }
+        ChiseledBookShelfBlockEntity > BlockEntity {  }
+        CommandBlockEntity > BlockEntity {  }
+        ComparatorBlockEntity > BlockEntity {  }
+        ConduitBlockEntity > BlockEntity {  }
+        CopperGolemStatueBlockEntity > BlockEntity {  }
+        CrafterBlockEntity > RandomizableContainerBlockEntity {  }
+        CreakingHeartBlockEntity > BlockEntity {  }
+        DaylightDetectorBlockEntity > BlockEntity {  }
+        DecoratedPotBlockEntity > BlockEntity {  }
+        DispenserBlockEntity > RandomizableContainerBlockEntity {  }
+        DropperBlockEntity > DispenserBlockEntity {  }
+        EnchantingTableBlockEntity > BlockEntity {  }
+        EnderChestBlockEntity > BlockEntity {  }
+        FurnaceBlockEntity > AbstractFurnaceBlockEntity {  }
+        HangingSignBlockEntity > SignBlockEntity {  }
+        HopperBlockEntity > RandomizableContainerBlockEntity {  }
+        JigsawBlockEntity > BlockEntity {  }
+        JukeboxBlockEntity > BlockEntity {  }
+        LecternBlockEntity > BlockEntity {  }
+        PistonMovingBlockEntity > BlockEntity {  }
+        RandomizableContainerBlockEntity > BaseContainerBlockEntity {  }
+        SculkCatalystBlockEntity > BlockEntity {  }
+        SculkSensorBlockEntity > BlockEntity {  }
+        SculkShriekerBlockEntity > BlockEntity {  }
+        ShelfBlockEntity > BlockEntity {  }
+        ShulkerBoxBlockEntity > RandomizableContainerBlockEntity {  }
+        SignBlockEntity > BlockEntity {  }
+        SkullBlockEntity > BlockEntity {  }
+        SmokerBlockEntity > AbstractFurnaceBlockEntity {  }
+        SpawnerBlockEntity > BlockEntity {  }
+        StructureBlockEntity > BlockEntity {  }
+        TestBlockEntity > BlockEntity {  }
+        TestInstanceBlockEntity > BlockEntity {  }
+        TheEndGatewayBlockEntity > TheEndPortalBlockEntity {  }
+        TheEndPortalBlockEntity > BlockEntity {  }
+        TrappedChestBlockEntity > ChestBlockEntity {  }
+        TrialSpawnerBlockEntity > BlockEntity {  }
+        VaultBlockEntity > BlockEntity {  }
+    }
+
+    block_entity_compound_types! {
+        "1.21.11";
+    }
+}
+
+/// Accompanying types for block entities in Minecraft 26.1.
+#[cfg(feature = "26.1")]
+pub mod mc26_1 {
+    block_entities! {
+        "26.1", mc26_1;
+        "minecraft:banner", Banner: BannerBlockEntity (> BlockEntity), [];
+        "minecraft:barrel", Barrel: BarrelBlockEntity (> > > BlockEntity), [];
+        "minecraft:beacon", Beacon: BeaconBlockEntity (> BlockEntity), [];
+        "minecraft:bed", Bed: BedBlockEntity (> BlockEntity), [];
+        "minecraft:beehive", Beehive: BeehiveBlockEntity (> BlockEntity), [];
+        "minecraft:bell", Bell: BellBlockEntity (> BlockEntity), [];
+        "minecraft:blast_furnace", BlastFurnace: BlastFurnaceBlockEntity (> > > BlockEntity), [];
+        "minecraft:brewing_stand", BrewingStand: BrewingStandBlockEntity (> > BlockEntity), [];
+        "minecraft:brushable_block", BrushableBlock: BrushableBlockEntity (> BlockEntity), [];
+        "minecraft:calibrated_sculk_sensor", CalibratedSculkSensor: CalibratedSculkSensorBlockEntity (> > BlockEntity), [];
+        "minecraft:campfire", Campfire: CampfireBlockEntity (> BlockEntity), [];
+        "minecraft:chest", Chest: ChestBlockEntity (> > > BlockEntity), [];
+        "minecraft:chiseled_bookshelf", ChiseledBookshelf: ChiseledBookShelfBlockEntity (> BlockEntity), [];
+        "minecraft:command_block", CommandBlock: CommandBlockEntity (> BlockEntity), [];
+        "minecraft:comparator", Comparator: ComparatorBlockEntity (> BlockEntity), [];
+        "minecraft:conduit", Conduit: ConduitBlockEntity (> BlockEntity), [];
+        "minecraft:copper_golem_statue", CopperGolemStatue: CopperGolemStatueBlockEntity (> BlockEntity), [];
+        "minecraft:crafter", Crafter: CrafterBlockEntity (> > > BlockEntity), [];
+        "minecraft:creaking_heart", CreakingHeart: CreakingHeartBlockEntity (> BlockEntity), [];
+        "minecraft:daylight_detector", DaylightDetector: DaylightDetectorBlockEntity (> BlockEntity), [];
+        "minecraft:decorated_pot", DecoratedPot: DecoratedPotBlockEntity (> BlockEntity), [];
+        "minecraft:dispenser", Dispenser: DispenserBlockEntity (> > > BlockEntity), [];
+        "minecraft:dropper", Dropper: DropperBlockEntity (> > > > BlockEntity), [];
+        "minecraft:enchanting_table", EnchantingTable: EnchantingTableBlockEntity (> BlockEntity), [];
+        "minecraft:end_gateway", EndGateway: TheEndGatewayBlockEntity (> > BlockEntity), [];
+        "minecraft:end_portal", EndPortal: TheEndPortalBlockEntity (> BlockEntity), [];
+        "minecraft:ender_chest", EnderChest: EnderChestBlockEntity (> BlockEntity), [];
+        "minecraft:furnace", Furnace: FurnaceBlockEntity (> > > BlockEntity), [];
+        "minecraft:hanging_sign", HangingSign: HangingSignBlockEntity (> > BlockEntity), [];
+        "minecraft:hopper", Hopper: HopperBlockEntity (> > > BlockEntity), [];
+        "minecraft:jigsaw", Jigsaw: JigsawBlockEntity (> BlockEntity), [];
+        "minecraft:jukebox", Jukebox: JukeboxBlockEntity (> BlockEntity), [];
+        "minecraft:lectern", Lectern: LecternBlockEntity (> BlockEntity), [];
+        "minecraft:mob_spawner", MobSpawner: SpawnerBlockEntity (> BlockEntity), [];
+        "minecraft:piston", Piston: PistonMovingBlockEntity (> BlockEntity), [];
+        "minecraft:sculk_catalyst", SculkCatalyst: SculkCatalystBlockEntity (> BlockEntity), [];
+        "minecraft:sculk_sensor", SculkSensor: SculkSensorBlockEntity (> BlockEntity), [];
+        "minecraft:sculk_shrieker", SculkShrieker: SculkShriekerBlockEntity (> BlockEntity), [];
+        "minecraft:shelf", Shelf: ShelfBlockEntity (> BlockEntity), [];
+        "minecraft:shulker_box", ShulkerBox: ShulkerBoxBlockEntity (> > > BlockEntity), [];
+        "minecraft:sign", Sign: SignBlockEntity (> BlockEntity), [];
+        "minecraft:skull", Skull: SkullBlockEntity (> BlockEntity), [];
+        "minecraft:smoker", Smoker: SmokerBlockEntity (> > > BlockEntity), [];
+        "minecraft:structure_block", StructureBlock: StructureBlockEntity (> BlockEntity), [];
+        "minecraft:test_block", TestBlock: TestBlockEntity (> BlockEntity), [];
+        "minecraft:test_instance_block", TestInstanceBlock: TestInstanceBlockEntity (> BlockEntity), [];
+        "minecraft:trapped_chest", TrappedChest: TrappedChestBlockEntity (> > > > BlockEntity), [];
+        "minecraft:trial_spawner", TrialSpawner: TrialSpawnerBlockEntity (> BlockEntity), [];
+        "minecraft:vault", Vault: VaultBlockEntity (> BlockEntity), [];
+    }
+
+    block_entity_types! {
+        "26.1";
+        AbstractFurnaceBlockEntity > BaseContainerBlockEntity {  }
+        BannerBlockEntity > BlockEntity {  }
+        BarrelBlockEntity > RandomizableContainerBlockEntity {  }
+        BaseContainerBlockEntity > BlockEntity {  }
+        BeaconBlockEntity > BlockEntity {  }
+        BedBlockEntity > BlockEntity {  }
+        BeehiveBlockEntity > BlockEntity {  }
+        BellBlockEntity > BlockEntity {  }
+        BlastFurnaceBlockEntity > AbstractFurnaceBlockEntity {  }
+        BlockEntity { "x" as x: i32, "y" as y: i32, "z" as z: i32 }
+        BrewingStandBlockEntity > BaseContainerBlockEntity {  }
+        BrushableBlockEntity > BlockEntity {  }
+        CalibratedSculkSensorBlockEntity > SculkSensorBlockEntity {  }
+        CampfireBlockEntity > BlockEntity {  }
+        ChestBlockEntity > RandomizableContainerBlockEntity {  }
+        ChiseledBookShelfBlockEntity > BlockEntity {  }
+        CommandBlockEntity > BlockEntity {  }
+        ComparatorBlockEntity > BlockEntity {  }
+        ConduitBlockEntity > BlockEntity {  }
+        CopperGolemStatueBlockEntity > BlockEntity {  }
+        CrafterBlockEntity > RandomizableContainerBlockEntity {  }
+        CreakingHeartBlockEntity > BlockEntity {  }
+        DaylightDetectorBlockEntity > BlockEntity {  }
+        DecoratedPotBlockEntity > BlockEntity {  }
+        DispenserBlockEntity > RandomizableContainerBlockEntity {  }
+        DropperBlockEntity > DispenserBlockEntity {  }
+        EnchantingTableBlockEntity > BlockEntity {  }
+        EnderChestBlockEntity > BlockEntity {  }
+        FurnaceBlockEntity > AbstractFurnaceBlockEntity {  }
+        HangingSignBlockEntity > SignBlockEntity {  }
+        HopperBlockEntity > RandomizableContainerBlockEntity {  }
+        JigsawBlockEntity > BlockEntity {  }
+        JukeboxBlockEntity > BlockEntity {  }
+        LecternBlockEntity > BlockEntity {  }
+        PistonMovingBlockEntity > BlockEntity {  }
+        RandomizableContainerBlockEntity > BaseContainerBlockEntity {  }
+        SculkCatalystBlockEntity > BlockEntity {  }
+        SculkSensorBlockEntity > BlockEntity {  }
+        SculkShriekerBlockEntity > BlockEntity {  }
+        ShelfBlockEntity > BlockEntity {  }
+        ShulkerBoxBlockEntity > RandomizableContainerBlockEntity {  }
+        SignBlockEntity > BlockEntity {  }
+        SkullBlockEntity > BlockEntity {  }
+        SmokerBlockEntity > AbstractFurnaceBlockEntity {  }
+        SpawnerBlockEntity > BlockEntity {  }
+        StructureBlockEntity > BlockEntity {  }
+        TestBlockEntity > BlockEntity {  }
+        TestInstanceBlockEntity > BlockEntity {  }
+        TheEndGatewayBlockEntity > TheEndPortalBlockEntity {  }
+        TheEndPortalBlockEntity > BlockEntity {  }
+        TrappedChestBlockEntity > ChestBlockEntity {  }
+        TrialSpawnerBlockEntity > BlockEntity {  }
+        VaultBlockEntity > BlockEntity {  }
+    }
+
+    block_entity_compound_types! {
+        "26.1";
+    }
+}
+
+/// Accompanying types for block entities in Minecraft 26.2.
+#[cfg(feature = "26.2")]
+pub mod mc26_2 {
+    block_entities! {
+        "26.2", mc26_2;
+        "minecraft:banner", Banner: BannerBlockEntity (> BlockEntity), [];
+        "minecraft:barrel", Barrel: BarrelBlockEntity (> > > BlockEntity), [];
+        "minecraft:beacon", Beacon: BeaconBlockEntity (> BlockEntity), [];
+        "minecraft:beehive", Beehive: BeehiveBlockEntity (> BlockEntity), [];
+        "minecraft:bell", Bell: BellBlockEntity (> BlockEntity), [];
+        "minecraft:blast_furnace", BlastFurnace: BlastFurnaceBlockEntity (> > > BlockEntity), [];
+        "minecraft:brewing_stand", BrewingStand: BrewingStandBlockEntity (> > BlockEntity), [];
+        "minecraft:brushable_block", BrushableBlock: BrushableBlockEntity (> BlockEntity), [];
+        "minecraft:calibrated_sculk_sensor", CalibratedSculkSensor: CalibratedSculkSensorBlockEntity (> > BlockEntity), [];
+        "minecraft:campfire", Campfire: CampfireBlockEntity (> BlockEntity), [];
+        "minecraft:chest", Chest: ChestBlockEntity (> > > BlockEntity), [];
+        "minecraft:chiseled_bookshelf", ChiseledBookshelf: ChiseledBookShelfBlockEntity (> BlockEntity), [];
+        "minecraft:command_block", CommandBlock: CommandBlockEntity (> BlockEntity), [];
+        "minecraft:comparator", Comparator: ComparatorBlockEntity (> BlockEntity), [];
+        "minecraft:conduit", Conduit: ConduitBlockEntity (> BlockEntity), [];
+        "minecraft:copper_golem_statue", CopperGolemStatue: CopperGolemStatueBlockEntity (> BlockEntity), [];
+        "minecraft:crafter", Crafter: CrafterBlockEntity (> > > BlockEntity), [];
+        "minecraft:creaking_heart", CreakingHeart: CreakingHeartBlockEntity (> BlockEntity), [];
+        "minecraft:daylight_detector", DaylightDetector: DaylightDetectorBlockEntity (> BlockEntity), [];
+        "minecraft:decorated_pot", DecoratedPot: DecoratedPotBlockEntity (> BlockEntity), [];
+        "minecraft:dispenser", Dispenser: DispenserBlockEntity (> > > BlockEntity), [];
+        "minecraft:dropper", Dropper: DropperBlockEntity (> > > > BlockEntity), [];
+        "minecraft:enchanting_table", EnchantingTable: EnchantingTableBlockEntity (> BlockEntity), [];
+        "minecraft:end_gateway", EndGateway: TheEndGatewayBlockEntity (> > BlockEntity), [];
+        "minecraft:end_portal", EndPortal: TheEndPortalBlockEntity (> BlockEntity), [];
+        "minecraft:ender_chest", EnderChest: EnderChestBlockEntity (> BlockEntity), [];
+        "minecraft:furnace", Furnace: FurnaceBlockEntity (> > > BlockEntity), [];
+        "minecraft:hanging_sign", HangingSign: HangingSignBlockEntity (> > BlockEntity), [];
+        "minecraft:hopper", Hopper: HopperBlockEntity (> > > BlockEntity), [];
+        "minecraft:jigsaw", Jigsaw: JigsawBlockEntity (> BlockEntity), [];
+        "minecraft:jukebox", Jukebox: JukeboxBlockEntity (> BlockEntity), [];
+        "minecraft:lectern", Lectern: LecternBlockEntity (> BlockEntity), [];
+        "minecraft:mob_spawner", MobSpawner: SpawnerBlockEntity (> BlockEntity), [];
+        "minecraft:piston", Piston: PistonMovingBlockEntity (> BlockEntity), [];
+        "minecraft:potent_sulfur", PotentSulfur: PotentSulfurBlockEntity (> BlockEntity), [];
+        "minecraft:sculk_catalyst", SculkCatalyst: SculkCatalystBlockEntity (> BlockEntity), [];
+        "minecraft:sculk_sensor", SculkSensor: SculkSensorBlockEntity (> BlockEntity), [];
+        "minecraft:sculk_shrieker", SculkShrieker: SculkShriekerBlockEntity (> BlockEntity), [];
+        "minecraft:shelf", Shelf: ShelfBlockEntity (> BlockEntity), [];
+        "minecraft:shulker_box", ShulkerBox: ShulkerBoxBlockEntity (> > > BlockEntity), [];
+        "minecraft:sign", Sign: SignBlockEntity (> BlockEntity), [];
+        "minecraft:skull", Skull: SkullBlockEntity (> BlockEntity), [];
+        "minecraft:smoker", Smoker: SmokerBlockEntity (> > > BlockEntity), [];
+        "minecraft:structure_block", StructureBlock: StructureBlockEntity (> BlockEntity), [];
+        "minecraft:test_block", TestBlock: TestBlockEntity (> BlockEntity), [];
+        "minecraft:test_instance_block", TestInstanceBlock: TestInstanceBlockEntity (> BlockEntity), [];
+        "minecraft:trapped_chest", TrappedChest: TrappedChestBlockEntity (> > > > BlockEntity), [];
+        "minecraft:trial_spawner", TrialSpawner: TrialSpawnerBlockEntity (> BlockEntity), [];
+        "minecraft:vault", Vault: VaultBlockEntity (> BlockEntity), [];
+    }
+
+    block_entity_types! {
+        "26.2";
+        AbstractFurnaceBlockEntity > BaseContainerBlockEntity {  }
+        BannerBlockEntity > BlockEntity {  }
+        BarrelBlockEntity > RandomizableContainerBlockEntity {  }
+        BaseContainerBlockEntity > BlockEntity {  }
+        BeaconBlockEntity > BlockEntity {  }
+        BeehiveBlockEntity > BlockEntity {  }
+        BellBlockEntity > BlockEntity {  }
+        BlastFurnaceBlockEntity > AbstractFurnaceBlockEntity {  }
+        BlockEntity { "x" as x: i32, "y" as y: i32, "z" as z: i32 }
+        BrewingStandBlockEntity > BaseContainerBlockEntity {  }
+        BrushableBlockEntity > BlockEntity {  }
+        CalibratedSculkSensorBlockEntity > SculkSensorBlockEntity {  }
+        CampfireBlockEntity > BlockEntity {  }
+        ChestBlockEntity > RandomizableContainerBlockEntity {  }
+        ChiseledBookShelfBlockEntity > BlockEntity {  }
+        CommandBlockEntity > BlockEntity {  }
+        ComparatorBlockEntity > BlockEntity {  }
+        ConduitBlockEntity > BlockEntity {  }
+        CopperGolemStatueBlockEntity > BlockEntity {  }
+        CrafterBlockEntity > RandomizableContainerBlockEntity {  }
+        CreakingHeartBlockEntity > BlockEntity {  }
+        DaylightDetectorBlockEntity > BlockEntity {  }
+        DecoratedPotBlockEntity > BlockEntity {  }
+        DispenserBlockEntity > RandomizableContainerBlockEntity {  }
+        DropperBlockEntity > DispenserBlockEntity {  }
+        EnchantingTableBlockEntity > BlockEntity {  }
+        EnderChestBlockEntity > BlockEntity {  }
+        FurnaceBlockEntity > AbstractFurnaceBlockEntity {  }
+        HangingSignBlockEntity > SignBlockEntity {  }
+        HopperBlockEntity > RandomizableContainerBlockEntity {  }
+        JigsawBlockEntity > BlockEntity {  }
+        JukeboxBlockEntity > BlockEntity {  }
+        LecternBlockEntity > BlockEntity {  }
+        PistonMovingBlockEntity > BlockEntity {  }
+        PotentSulfurBlockEntity > BlockEntity {  }
+        RandomizableContainerBlockEntity > BaseContainerBlockEntity {  }
+        SculkCatalystBlockEntity > BlockEntity {  }
+        SculkSensorBlockEntity > BlockEntity {  }
+        SculkShriekerBlockEntity > BlockEntity {  }
+        ShelfBlockEntity > BlockEntity {  }
+        ShulkerBoxBlockEntity > RandomizableContainerBlockEntity {  }
+        SignBlockEntity > BlockEntity {  }
+        SkullBlockEntity > BlockEntity {  }
+        SmokerBlockEntity > AbstractFurnaceBlockEntity {  }
+        SpawnerBlockEntity > BlockEntity {  }
+        StructureBlockEntity > BlockEntity {  }
+        TestBlockEntity > BlockEntity {  }
+        TestInstanceBlockEntity > BlockEntity {  }
+        TheEndGatewayBlockEntity > TheEndPortalBlockEntity {  }
+        TheEndPortalBlockEntity > BlockEntity {  }
+        TrappedChestBlockEntity > ChestBlockEntity {  }
+        TrialSpawnerBlockEntity > BlockEntity {  }
+        VaultBlockEntity > BlockEntity {  }
+    }
+
+    block_entity_compound_types! {
+        "26.2";
     }
 }

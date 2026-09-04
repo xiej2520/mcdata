@@ -62,9 +62,13 @@ mc-all = [
     "1.21.5",
     "1.21.6",
     "1.21.7",
+    "1.21.9",
+    "1.21.11",
+    "26.1",
+    "26.2",
 ]
-## Enable lists for the latest supported Minecraft version. Currently 1.21.7
-latest = ["1.21.7"]
+## Enable lists for the latest supported Minecraft version. Currently 26.2
+latest = ["26.2"]
 ## Enable lists for Minecraft 1.14, extracted from Minecraft 1.14.4
 "1.14" = []
 ## Enable lists for Minecraft 1.15, extracted from Minecraft 1.15.1
@@ -107,6 +111,14 @@ latest = ["1.21.7"]
 "1.21.6" = []
 ## Enable lists for Minecraft 1.21.7, extracted from Minecraft 1.21.8
 "1.21.7" = []
+## Enable lists for Minecraft 1.21.9, extracted from Minecraft 1.21.10
+"1.21.9" = []
+## Enable lists for Minecraft 1.21.11, extracted from Minecraft 1.21.11
+"1.21.11" = []
+## Enable lists for Minecraft 26.1, extracted from Minecraft 26.1.2
+"26.1" = []
+## Enable lists for Minecraft 26.2, extracted from Minecraft 26.2
+"26.2" = []
 ### FEATURE AUTOGEN END ###
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

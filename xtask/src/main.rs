@@ -429,7 +429,7 @@ export default {
         );
         mc_jar_paths.push(
             glob::glob(
-                gradle_user_home.join(format!("caches/fabric-loom/minecraftMaven/net/minecraft/minecraft-merged/{mc}-loom.mappings.*/*.jar"))
+                gradle_user_home.join(format!("caches/fabric-loom/minecraftMaven/net/minecraft/minecraft-merged*/{mc}*/*.jar"))
                     .to_str()
                     .with_context(|| format!("failed to locate Minecraft jar for {mc}"))?,
             )

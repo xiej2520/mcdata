@@ -487,3 +487,91 @@ pub mod mc1_21_7 {
     #[cfg(feature = "block-entities")]
     pub use crate::block_entity::list::mc1_21_7::compounds as block_entity_compounds;
 }
+
+/// Types for Minecraft 1.21.9.
+#[cfg(feature = "1.21.9")]
+#[rustfmt::skip]
+pub mod mc1_21_9 {
+    #[cfg(feature = "block-states")]
+    pub use crate::block_state::list::mc1_21_9::*;
+
+    #[cfg(feature = "entities")]
+    pub use crate::entity::list::mc1_21_9::Entity;
+    #[cfg(feature = "entities")]
+    pub use crate::entity::list::mc1_21_9::types as entity_types;
+    #[cfg(feature = "entities")]
+    pub use crate::entity::list::mc1_21_9::compounds as entity_compounds;
+
+    #[cfg(feature = "block-entities")]
+    pub use crate::block_entity::list::mc1_21_9::BlockEntity;
+    #[cfg(feature = "block-entities")]
+    pub use crate::block_entity::list::mc1_21_9::types as block_entity_types;
+    #[cfg(feature = "block-entities")]
+    pub use crate::block_entity::list::mc1_21_9::compounds as block_entity_compounds;
+}
+
+/// Types for Minecraft 1.21.11.
+#[cfg(feature = "1.21.11")]
+#[rustfmt::skip]
+pub mod mc1_21_11 {
+    #[cfg(feature = "block-states")]
+    pub use crate::block_state::list::mc1_21_11::*;
+
+    #[cfg(feature = "entities")]
+    pub use crate::entity::list::mc1_21_11::Entity;
+    #[cfg(feature = "entities")]
+    pub use crate::entity::list::mc1_21_11::types as entity_types;
+    #[cfg(feature = "entities")]
+    pub use crate::entity::list::mc1_21_11::compounds as entity_compounds;
+
+    #[cfg(feature = "block-entities")]
+    pub use crate::block_entity::list::mc1_21_11::BlockEntity;
+    #[cfg(feature = "block-entities")]
+    pub use crate::block_entity::list::mc1_21_11::types as block_entity_types;
+    #[cfg(feature = "block-entities")]
+    pub use crate::block_entity::list::mc1_21_11::compounds as block_entity_compounds;
+}
+
+/// Types for Minecraft 26.1.
+#[cfg(feature = "26.1")]
+#[rustfmt::skip]
+pub mod mc26_1 {
+    #[cfg(feature = "block-states")]
+    pub use crate::block_state::list::mc26_1::*;
+
+    #[cfg(feature = "entities")]
+    pub use crate::entity::list::mc26_1::Entity;
+    #[cfg(feature = "entities")]
+    pub use crate::entity::list::mc26_1::types as entity_types;
+    #[cfg(feature = "entities")]
+    pub use crate::entity::list::mc26_1::compounds as entity_compounds;
+
+    #[cfg(feature = "block-entities")]
+    pub use crate::block_entity::list::mc26_1::BlockEntity;
+    #[cfg(feature = "block-entities")]
+    pub use crate::block_entity::list::mc26_1::types as block_entity_types;
+    #[cfg(feature = "block-entities")]
+    pub use crate::block_entity::list::mc26_1::compounds as block_entity_compounds;
+}
+
+/// Types for Minecraft 26.2.
+#[cfg(feature = "26.2")]
+#[rustfmt::skip]
+pub mod mc26_2 {
+    #[cfg(feature = "block-states")]
+    pub use crate::block_state::list::mc26_2::*;
+
+    #[cfg(feature = "entities")]
+    pub use crate::entity::list::mc26_2::Entity;
+    #[cfg(feature = "entities")]
+    pub use crate::entity::list::mc26_2::types as entity_types;
+    #[cfg(feature = "entities")]
+    pub use crate::entity::list::mc26_2::compounds as entity_compounds;
+
+    #[cfg(feature = "block-entities")]
+    pub use crate::block_entity::list::mc26_2::BlockEntity;
+    #[cfg(feature = "block-entities")]
+    pub use crate::block_entity::list::mc26_2::types as block_entity_types;
+    #[cfg(feature = "block-entities")]
+    pub use crate::block_entity::list::mc26_2::compounds as block_entity_compounds;
+}
