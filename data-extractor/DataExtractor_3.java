@@ -205,7 +205,7 @@ public class DataExtractor implements ModInitializer {
             Class<?> beClass = (Class<?>) ((ParameterizedType) field.getGenericType()).getActualTypeArguments()[0];
 
             JsonObject beInfo = new JsonObject();
-            beInfo.addProperty("id", Objects.requireNonNull(BlockEntityType.getKey(beType)).toString());
+            beInfo.addProperty("id", Objects.requireNonNull(BuiltInRegistries.BLOCK_ENTITY_TYPE.getKey(beType)).toString());
             beInfo.addProperty("class", beClass.getName());
             blockEntities.add(beInfo);
 
